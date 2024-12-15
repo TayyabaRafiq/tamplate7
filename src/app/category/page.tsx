@@ -69,7 +69,7 @@ const page = () => {
                                <CardDescription>Sport</CardDescription>
                              </CardHeader>
                              <CardContent className="w-full flex flex-col items-center justify-center gap-4">
-                               <Image src='/images/car3.png' alt='' width={220} height={68} />
+                               <Image src='/images/Car3.png' alt='' width={220} height={68} />
                                <Image src='/images/Spesification.png' alt='' width={256} height={24} />
                              </CardContent>
                              <CardFooter className="w-full flex items-center justify-between">
@@ -86,7 +86,7 @@ const page = () => {
                               <CardDescription>Sport</CardDescription>
                             </CardHeader>
                             <CardContent className="w-full flex flex-col items-center justify-center gap-4">
-                              <Image src='/images/car5.png' alt='' width={220} height={68} />
+                              <Image src='/images/Car5.png' alt='' width={220} height={68} />
                               <Image src='/images/Spesification.png' alt='' width={256} height={24} />
                             </CardContent>
                             <CardFooter className="w-full flex items-center justify-between">
@@ -101,7 +101,7 @@ const page = () => {
                               <CardDescription>Sport</CardDescription>
                             </CardHeader>
                             <CardContent className="w-full flex flex-col items-center justify-center gap-4">
-                              <Image src='/images/car4.png' alt='' width={220} height={68} />
+                              <Image src='/images/Car4.png' alt='' width={220} height={68} />
                               <Image src='/images/Spesification.png' alt='' width={256} height={24} />
                             </CardContent>
                             <CardFooter className="w-full flex items-center justify-between">
@@ -116,7 +116,7 @@ const page = () => {
                               <CardDescription>Sport</CardDescription>
                             </CardHeader>
                             <CardContent className="w-full flex flex-col items-center justify-center gap-4">
-                              <Image src='/images/car5.png' alt='' width={220} height={68} />
+                              <Image src='/images/Car5.png' alt='' width={220} height={68} />
                               <Image src='/images/Spesification.png' alt='' width={256} height={24} />
                             </CardContent>
                             <CardFooter className="w-full flex items-center justify-between">
@@ -131,7 +131,7 @@ const page = () => {
                               <CardDescription>Sport</CardDescription>
                             </CardHeader>
                             <CardContent className="w-full flex flex-col items-center justify-center gap-4">
-                              <Image src='/images/car4.png' alt='' width={220} height={68} />
+                              <Image src='/images/Car4.png' alt='' width={220} height={68} />
                               <Image src='/images/Spesification.png' alt='' width={256} height={24} />
                             </CardContent>
                             <CardFooter className="w-full flex items-center justify-between">
@@ -146,7 +146,7 @@ const page = () => {
                               <CardDescription>Sport</CardDescription>
                             </CardHeader>
                             <CardContent className="w-full flex flex-col items-center justify-center gap-4">
-                              <Image src='/images/car4.png' alt='' width={220} height={68} />
+                              <Image src='/images/Car4.png' alt='' width={220} height={68} />
                               <Image src='/images/Spesification.png' alt='' width={256} height={24} />
                             </CardContent>
                             <CardFooter className="w-full flex items-center justify-between">
@@ -162,7 +162,7 @@ const page = () => {
                               <CardDescription>Sport</CardDescription>
                             </CardHeader>
                             <CardContent className="w-full flex flex-col items-center justify-center gap-4">
-                              <Image src='/images/car4.png' alt='' width={220} height={68} />
+                              <Image src='/images/Car4.png' alt='' width={220} height={68} />
                               <Image src='/images/Spesification.png' alt='' width={256} height={24} />
                             </CardContent>
                             <CardFooter className="w-full flex items-center justify-between">
