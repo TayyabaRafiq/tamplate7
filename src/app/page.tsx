@@ -13,6 +13,9 @@ import { IoMdHeart } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import CarsPage from "./CarsPage/page";
+ 
+
 
 
 export default function Home() {
@@ -29,7 +32,11 @@ export default function Home() {
         <h1 className='text-[#3563E9] text-sm md:text-lg font-medium hover:underline'>View All</h1>
         </Link>
         </div>
-      
+
+       
+        <CarsPage />
+
+
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
     <Card className="w-full max-w-[304px] mx-auto h-auto flex flex-col justify-between">
@@ -238,6 +245,7 @@ export default function Home() {
   <button className="bg-[#3563E9] px-4 py-2 text-white rounded-md mt-5" >Show More Cars</button>
   </Link>
 </section>
+
 
  <Footer />
       
