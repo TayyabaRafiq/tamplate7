@@ -16,19 +16,17 @@ type Cars = {
     originalPrice : number,
     tags : string[],
     imageUrl : string;
-    slug :{
-      _type : "slug"
-      current :string;
+    slug: { current: string };
     };
 
-};
+
 
 interface CarPageProps {
     params :{slug : string}
 }
 
-async function getCar(slug:string): Promise<Cars>{
-return client.fetch(
+async function getCar(slug:string): Promise<Cars >{
+return client.fetch<Cars>(
     groq `*[_type == "car" && slug.current == $slug][0]{
      _id,
     name,
@@ -50,7 +48,7 @@ return client.fetch(
 
 } 
 
-export default async function carPage({params}:CarPageProps){
+const CarPage = async ({ params }: CarPageProps) => {
     const {slug} = params;
     const car = await getCar(slug);
     if (!car) {
@@ -77,4 +75,5 @@ export default async function carPage({params}:CarPageProps){
             </div>
         </div>
     );
-}
+};
+export default CarPage;
