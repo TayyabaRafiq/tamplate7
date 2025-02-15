@@ -24,12 +24,7 @@ type Cars = {
     
     }
 
-    interface CarPageProps {
-      params: { slug?: string }; 
-  }
-
-
-  export default function CarsPage() {
+    export default function CarsPage() {
     const [cars, setCars] = useState<Cars[]>([]);
   
     useEffect(() => {

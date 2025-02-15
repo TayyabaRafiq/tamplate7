@@ -6,20 +6,6 @@
 import Image from "next/image";
 import { getCarById } from "@/app/CarsPage/page";
 
-type Cars = {
-    _id : string,
-    name : string,
-    brand : string,
-    type : string,
-    fuelCapacity : string,
-    transmission : string,
-    seatingCapacity : string
-    pricePerDay : number,
-    originalPrice : number,
-    tags : string[],
-    imageUrl : string;
-    slug: { current: string };
-    };
 
     export default async function carPage({params}: {params:{slug: string}}) {
 
