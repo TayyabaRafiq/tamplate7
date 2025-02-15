@@ -20,12 +20,13 @@ type Cars = {
     originalPrice : number,
     tags : string[],
     imageUrl : string;
-    slug :{
-      _type : "slug"
-      current :string;
+    slug: { current: string };
+    
     }
 
-}
+    interface CarPageProps {
+      params: { slug?: string }; 
+  }
 
 
   export default function CarsPage() {
@@ -49,8 +50,10 @@ type Cars = {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {cars.map((car) => (
           <div key={car._id} className="border rounded-lg p-4 shadow-md">
-
-           <Link href= {`/cars/${car.slug}`}>
+          
+          {/* car Image */}
+          
+           <Link href= {`/cars/${car._id}`}>
            
             <Image
               src={car.imageUrl}
@@ -59,7 +62,7 @@ type Cars = {
               height={200}
               className="rounded-md"
             />
-            
+           
             <h2 className="text-xl font-semibold mt-2">{car.name}</h2>
             <p className="text-gray-600">{car.brand} - {car.type}</p>
             <p className="text-gray-800 font-bold mt-1">💰 ${car.pricePerDay} / day</p>
@@ -79,4 +82,29 @@ type Cars = {
       </div>
     </div>
   );
+};
+
+export const getCarById = async (id:string) => {
+  try{
+    const queryCar = 
+    `*[_type == "car" && _id == $id][0] {
+      _id,
+      name,
+      brand,
+      type,
+      seatingCapacity,
+      pricePerDay,
+      originalPrice,
+      tags,
+      "imageUrl": image.asset->url,
+      
+  }`
+  const getCar: Cars | null = await sanityFetch({ query: queryCar, params: { id } });
+  return getCar? getCar : null;
+
+  } catch (error) {
+   console.log(error);
+   return null
+  }
 }
+

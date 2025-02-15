@@ -9,11 +9,17 @@ export default {
         title: 'Car Name',
       },
       {
-        name:"slug",
+        name: "slug",
         type: "slug",
         title: "Slug",
         options: {
-          source: "name"
+          source: "name",
+          maxLength: 200,
+          slugify: (input: string) =>
+            input
+              .toLowerCase()
+              .replace(/\s+/g, "-") 
+              .replace(/[^\w-]+/g, ""), 
         }
       },
       {
