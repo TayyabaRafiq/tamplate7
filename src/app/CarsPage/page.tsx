@@ -79,27 +79,4 @@ type Cars = {
   );
 };
 
-export const getCarById = async (id:string) => {
-  try{
-    const queryCar = 
-    `*[_type == "car" && _id == $id][0] {
-      _id,
-      name,
-      brand,
-      type,
-      seatingCapacity,
-      pricePerDay,
-      originalPrice,
-      tags,
-      "imageUrl": image.asset->url,
-      
-  }`
-  const getCar: Cars | null = await sanityFetch({ query: queryCar, params: { id } });
-  return getCar? getCar : null;
-
-  } catch (error) {
-   console.log(error);
-   return null
-  }
-}
 

@@ -3,8 +3,8 @@
 // import { useEffect, useState } from "react";
 // import { client } from "@/sanity/lib/client";
 // import { groq } from "next-sanity";
+import { getCarById } from "@/sanity/lib/getCar";
 import Image from "next/image";
-import { getCarById } from "@/app/CarsPage/page";
 
 
     export default async function carPage({params}: {params:{slug: string}}) {
