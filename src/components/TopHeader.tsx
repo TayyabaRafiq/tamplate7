@@ -1,21 +1,39 @@
-import Image from 'next/image';
-import React from 'react';
+import React from "react";
+import { Phone, Mail, Globe } from "lucide-react";
+import Link from "next/link";
+
 
 const TopHeader = () => {
   return (
-    <div className="flex flex-wrap justify-between items-center w-full max-w-[1240px] mx-auto px-4 py-3 bg-white">
-      {/* Left Section */}
-      <div className="flex items-center space-x-3">
-        <Image src="/images/command.png" alt="Command Icon" width={32} height={32} />
-        <div className="text-lg md:text-xl lg:text-2xl font-bold leading-6 md:leading-8 lg:leading-10">
-          High Fidelity Dashboard - Home Rent
+    <div className="w-full bg-[#0F172A] border-b border-slate-800 py-2 px-4 md:px-8">
+      <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-500">
+        <div className="flex items-center gap-6">
+          <div className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer">
+            <Phone className="w-3 h-3 text-primary" />
+            <span>+1 (555) MORENT-00</span>
+          </div>
+          <div className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer">
+            <Mail className="w-3 h-3 text-primary" />
+            <span>SUPPORT@MORENT.COM</span>
+          </div>
         </div>
-      </div>
-
-      {/* Right Section */}
-      <div className="text-sm md:text-base lg:text-lg text-right">
-        <span className="block md:inline text-gray-500 mr-1">Last Updated:</span>
-        <span className="text-black font-bold">8 Aug 2022</span>
+        <div className="flex items-center gap-6 text-slate-400">
+          <Link href="/" className="hover:text-white">Home</Link>
+          <Link href="/CarsPage" className="hover:text-white">Cars</Link>
+          <Link href="/category" className="hover:text-white">Category</Link>
+          <Link href="/admin" className="hover:text-white">Admin</Link>
+        </div>
+        <div className="flex items-center gap-6">
+          <div className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer">
+            <Globe className="w-3 h-3 text-primary" />
+            <span>EN / USD</span>
+          </div>
+          <div className="flex gap-4">
+            <span className="hover:text-white transition-colors cursor-pointer">FB</span>
+            <span className="hover:text-white transition-colors cursor-pointer">TW</span>
+            <span className="hover:text-white transition-colors cursor-pointer">IG</span>
+          </div>
+        </div>
       </div>
     </div>
   );

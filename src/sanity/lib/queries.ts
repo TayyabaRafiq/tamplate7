@@ -32,6 +32,7 @@ export const fourcars = defineQuery(
     pricePerDay,
     originalPrice,
     tags,
-    "imageUrl": image.asset->url
+    "imageUrl": image.asset->url,
+    "slug": slug.current
   }`
 )
