@@ -1,13 +1,12 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 
 import Link from 'next/link';
-import { useRouter, usePathname, useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
-const Header = () => {
+const HeaderContent = () => {
   const router = useRouter();
-  const pathname = usePathname();
   const searchParams = useSearchParams();
   const [search, setSearch] = useState(searchParams.get('search') || '');
 
@@ -38,7 +37,15 @@ const Header = () => {
         </div>
       </div>
 
-    </div>
+                </div>
+  );
+};
+
+const Header = () => {
+  return (
+    <Suspense fallback={<div className="w-full h-[72px] bg-[#1E293B] border-b border-slate-800" />}>
+      <HeaderContent />
+    </Suspense>
   );
 };
 
